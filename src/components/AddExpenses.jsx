@@ -1,18 +1,19 @@
+// AddExpenses.js
+import React, { useState } from "react";
 import axios from "axios";
-import { useEffect, useState } from "react";
+import CategoryDropdown from "./CategoryDropdown";
 
-const AddExpenses = () => {
+const AddExpenses = ({ categories }) => {
   const api = "http://localhost:5299/api/Expense";
   const [name, setName] = useState("");
   const [amount, setAmount] = useState("");
-  const [category, setCategory] = useState("");
-  const [user, setUser] = useState("");
-  const [categoryId, setCategoryId] = useState(null);
+  const [selectedCategory, setSelectedCategory] = useState("");
+
   const createExpense = (event) => {
     event.preventDefault();
 
     axios
-      .post(api, { name: name, amount: amount })
+      .post(api, { name: name, amount: amount, category: selectedCategory })
       .then((response) => {
         console.log("Expense created:", response.data);
       })
@@ -22,29 +23,36 @@ const AddExpenses = () => {
   return (
     <div>
       <form onSubmit={createExpense}>
-        <div class="form-group">
-          <label for="formGroupExampleInput">Name</label>
+        <div className="form-group">
+          <label htmlFor="name">Name</label>
           <input
             type="text"
-            class="form-control"
-            id="formGroupExampleInput"
+            className="form-control"
+            id="name"
             placeholder="Enter name"
             value={name}
             onChange={(event) => setName(event.target.value)}
             required
           />
-          <label for="formGroupExampleInput">Amount</label>
+          <label htmlFor="amount">Amount</label>
           <input
             type="text"
-            class="form-control"
-            id="formGroupExampleInput"
+            className="form-control"
+            id="amount"
             placeholder="Enter amount"
             value={amount}
             onChange={(event) => setAmount(event.target.value)}
             required
           />
+          {categories && categories.length > 0 && (
+            <CategoryDropdown
+              categories={categories}
+              selectedCategory={selectedCategory}
+              onChange={setSelectedCategory}
+            />
+          )}
         </div>
-        <button type="submit" class="btn btn-primary">
+        <button type="submit" className="btn btn-primary">
           Add Expense
         </button>
       </form>

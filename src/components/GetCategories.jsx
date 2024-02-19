@@ -23,7 +23,7 @@ const GetCategories = () => {
     loadCategories();
   }, []);
   const AddCategoryLink = () => {
-    navigate("/categories/add");
+    navigate("/categor/add");
   };
 
   return (
