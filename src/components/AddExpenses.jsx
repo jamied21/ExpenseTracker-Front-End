@@ -7,7 +7,7 @@ const AddExpenses = () => {
   const [amount, setAmount] = useState("");
   const [category, setCategory] = useState("");
   const [user, setUser] = useState("");
-
+  const [categoryId, setCategoryId] = useState(null);
   const createExpense = (event) => {
     event.preventDefault();
 
