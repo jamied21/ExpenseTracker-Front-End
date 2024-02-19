@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import "../styles/AddButton.css";
+import AddExpenses from "./AddExpenses";
 
 const GetCategories = () => {
   const api = "http://localhost:5299/api/ExpenseCategory";
