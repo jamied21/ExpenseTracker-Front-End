@@ -3,6 +3,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import "../styles/AddButton.css";
 import AddExpenses from "./AddExpenses";
+import DeleteCategory from "./DeleteCategory";
 
 const GetCategories = () => {
   const api = "http://localhost:5299/api/ExpenseCategory";
@@ -41,6 +42,10 @@ const GetCategories = () => {
           return (
             <div className="expense-card-body" key={category.id}>
               <h1 className="expense-card-title">{category.name}</h1>
+              <DeleteCategory
+                categoryId={category.id}
+                setCategories={setCategories}
+              />
             </div>
           );
         })}
