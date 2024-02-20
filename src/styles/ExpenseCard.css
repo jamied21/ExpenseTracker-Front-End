@@ -1,12 +1,12 @@
 
 .expense-container {
     
-   display: grid;
-   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /*Adjust px to match width of card body */
+    display: grid;
+     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /*Adjust px to match width of card body */
    overflow-y: auto;
-   padding-top: 13px; /*Stops card from hovering into Expense List title*/
-   padding-left: 10px;
-   padding-right: 0px;
+  padding-top: 13px; /*Stops card from hovering into Expense List title*/
+    padding-left: 10px;
+    padding-right: 0px;
     
   }
   
@@ -40,3 +40,37 @@ color:azure;
     transform: scale(1.1); /* Scale up by 10% on hover */
 }
 
+
+
+
+.delete-button { 
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border: 2px solid #3498db;
+    color: #3498db;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+    margin: 10px 0;
+    margin-top: auto;
+    align-self: flex-start;
+}
+
+.delete-button:hover {
+    background-color: #3498db;
+    color: #fff;
+    transform: scale(1.05);}
+
+    .delete-button:focus {
+        outline: none; 
+    }
+    
+    /* Disabled State */
+    .delete-button:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+    }

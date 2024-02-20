@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import "../styles/DeleteButton.css";
+import "../styles/ExpenseCard.css";
 const DeleteExpense = ({ expenseId, setExpenses }) => {
   const api = `http://localhost:5299/api/Expense/${expenseId}`;
 
