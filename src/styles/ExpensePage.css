@@ -1,0 +1,12 @@
+.expense-page-container {
+    text-align: center;
+    padding: 20px;
+   
+}
+
+.expense-page-title {
+    font-size: 2em; /* Adjust the font size as needed */
+    font-weight: bold;
+    color: #2c3e50; /* Text color for better contrast */
+    margin: 0; /* Remove default margin for better spacing */
+}

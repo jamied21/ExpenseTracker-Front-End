@@ -1,10 +1,8 @@
 
 
-.delete-button-container {
-    position: absolute;
-      }
 
-.delete-button { display: inline-block;
+.delete-button { 
+    display: inline-block;
     padding: 10px 20px;
     font-size: 16px;
     font-weight: bold;
@@ -15,6 +13,9 @@
     color: #3498db;
     border-radius: 5px;
     transition: background-color 0.3s, color 0.3s, transform 0.3s;
+    margin: 10px 0;
+    margin-top: auto;
+    align-self: flex-start;
 }
 
 .delete-button:hover {
@@ -23,7 +24,7 @@
     transform: scale(1.05);}
 
     .delete-button:focus {
-        outline: none; /* Remove outline on focus */
+        outline: none; 
     }
     
     /* Disabled State */

@@ -3,7 +3,9 @@ import "../styles/ExpensePage.css";
 const ExpensePage = () => {
   return (
     <div>
-      <h1 className="expense-page-container">Expense List </h1>
+      <div className="expense-page-container ">
+        <h1 className="expense-page-title">Expenses </h1>
+      </div>
       <GetExpenses />
     </div>
   );
