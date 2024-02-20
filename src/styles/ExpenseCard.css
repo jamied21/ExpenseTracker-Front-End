@@ -1,12 +1,12 @@
 
 .expense-container {
     
-    display: grid;
-     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /*Adjust px to match width of card body */
+   display: grid;
+   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /*Adjust px to match width of card body */
    overflow-y: auto;
-  padding-top: 13px; /*Stops card from hovering into Expense List title*/
-    padding-left: 10px;
-    padding-right: 0px;
+   padding-top: 13px; /*Stops card from hovering into Expense List title*/
+   padding-left: 10px;
+   padding-right: 0px;
     
   }
   
@@ -39,3 +39,4 @@ color:azure;
 .expense-card-body:hover {
     transform: scale(1.1); /* Scale up by 10% on hover */
 }
+

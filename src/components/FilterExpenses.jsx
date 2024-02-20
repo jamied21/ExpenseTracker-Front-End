@@ -97,13 +97,13 @@ const FilterExpenses = () => {
           ? filteredExpenses.map((expense) => (
               <div className="expense-card-body" key={expense.id}>
                 <h1 className="expense-card-title">{expense.name}</h1>
-                <p className="expense-card-text">{expense.amount}</p>
+                <p className="expense-card-text">£{expense.amount}</p>
               </div>
             ))
           : expenses.map((expense) => (
               <div className="expense-card-body" key={expense.id}>
                 <h1 className="expense-card-title">{expense.name}</h1>
-                <p className="expense-card-text">{expense.amount}</p>
+                <p className="expense-card-text">£{expense.amount}</p>
               </div>
             ))}
       </div>

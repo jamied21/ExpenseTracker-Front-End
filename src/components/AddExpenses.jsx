@@ -1,10 +1,11 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const AddExpenses = () => {
   const api = "http://localhost:5299/api/Expense";
   const apiCategory = "http://localhost:5299/api/ExpenseCategory";
-
+  const navigate = useNavigate();
   //Post Request
   const [name, setName] = useState("");
   const [amount, setAmount] = useState("");
@@ -33,6 +34,9 @@ const AddExpenses = () => {
     }
     axios
       .post(api, { name: name, amount: amount, category: category })
+      .then((response) => {
+        navigate("/expenses");
+      })
       .then((response) => {
         console.log("Expense created:", response.data);
       })

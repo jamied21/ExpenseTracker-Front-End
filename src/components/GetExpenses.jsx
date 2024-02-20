@@ -3,6 +3,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import "../styles/ExpenseCard.css";
 import "../styles/AddButton.css";
+import DeleteExpense from "./DeleteExpense";
 
 const GetExpenses = () => {
   const api = "http://localhost:5299/api/Expense";
@@ -39,7 +40,9 @@ const GetExpenses = () => {
           return (
             <div className="expense-card-body" key={expense.id}>
               <h1 className="expense-card-title">{expense.name}</h1>
-              <p className="expense-card-text">{expense.amount}</p>
+              <p className="expense-card-text">£{expense.amount}</p>
+
+              <DeleteExpense expenseId={expense.id} setExpenses={setExpenses} />
             </div>
           );
         })}
