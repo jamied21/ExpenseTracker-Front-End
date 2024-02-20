@@ -1,0 +1,49 @@
+
+
+.dropdown-container {
+    margin-bottom: 10px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .select-wrapper {
+    position: relative;
+    display: inline-block;
+    width: 200px; 
+  }
+  
+  .select-wrapper select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    background-color: #fff;
+    cursor: pointer;
+    appearance: none;
+  }
+  
+  .select-wrapper::after {
+    content: '\25BC'; 
+    font-size: 14px;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    pointer-events: none;
+  }
+
+  .total-amount {
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 16px;
+    color: #495057; 
+  }
+  
+  
+  
+  
+  

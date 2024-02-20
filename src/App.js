@@ -8,12 +8,14 @@ import ExpensePage from './pages/ExpensePage';
 import AddExpensePage from './pages/AddExpensePage';
 import CategoryPage from './pages/CategoryPage';
 import AddCategoryPage from './pages/AddCategoryPage';
+import HomePage from './pages/HomePage';
 
 function App() {
   return (
     <div className="App">
       <NavBar/>
     <Routes> 
+    <Route path="/" element={<HomePage/>}/>
       <Route path="/expenses" element={<ExpensePage/>}/>
       <Route path='/expense/add' element = { <AddExpensePage/> }/>
       <Route path="/categories" element={<CategoryPage/>}/>
