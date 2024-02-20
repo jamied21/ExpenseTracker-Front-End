@@ -22,8 +22,9 @@ const GetCategories = () => {
   useEffect(() => {
     loadCategories();
   }, []);
+  console.log(categories);
   const AddCategoryLink = () => {
-    navigate("/categor/add");
+    navigate("/categories/add");
   };
 
   return (
