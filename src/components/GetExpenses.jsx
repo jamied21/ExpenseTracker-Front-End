@@ -41,7 +41,13 @@ const GetExpenses = () => {
             <div className="expense-card-body" key={expense.id}>
               <h1 className="expense-card-title">{expense.name}</h1>
               <p className="expense-card-text">£{expense.amount}</p>
-
+              <button
+                className="expense-button"
+                onClick={() => navigate(`/expense/update/${expense.id}`)}
+                type="button"
+              >
+                Update Expense
+              </button>
               <DeleteExpense expenseId={expense.id} setExpenses={setExpenses} />
             </div>
           );
