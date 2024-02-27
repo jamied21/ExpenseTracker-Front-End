@@ -28,12 +28,17 @@ const AddExpenses = () => {
     }
 
     const parsedAmount = parseFloat(amount);
-    if (isNaN(parsedAmount) || parsedAmount < 0) {
+    if (isNaN(parsedAmount) || parsedAmount <= 0) {
       setAmountError(true);
       return;
     }
     axios
-      .post(api, { name: name, amount: amount, category: category })
+      .post(api, {
+        name: name,
+        amount: amount,
+        categoryId: category,
+        expenseDate: new Date(),
+      })
       .then((response) => {
         navigate("/expenses");
       })
